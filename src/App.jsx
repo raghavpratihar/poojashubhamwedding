@@ -78,8 +78,6 @@ export default function App() {
                 <span key={line} className="block">{i === 0 ? `(${line})` : line}</span>
               ))}
             </p>
-            <p className="mt-8 font-serif-display text-lg sm:text-2xl font-semibold text-rose-deep">on {weddingDate.label}</p>
-            <p className="mt-1 font-serif-display italic text-base text-foreground/80 pb-12">as per programme</p>
           </div>
         </section>
 
