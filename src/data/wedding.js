@@ -37,24 +37,31 @@ export const weddingDate = {
   countdownTarget: "2026-11-27T00:00:00+05:30",
 };
 
+export const residence = {
+  label: "Haldi, Mehendi & Sangeet",
+  name: "",
+  address: "H.No. 121/A, Gali No. 2, Shiv Colony, Palla No. 1, Faridabad (121003)",
+  mapQuery: "Shiv Colony, Palla No. 1, Faridabad, Haryana 121003",
+};
+
 export const venue = {
-  label: "All Functions",
+  label: "Wedding (Reception of Barat, Dinner & Doli)",
   name: "Girraj Sharma Farm House",
   address: "Ashoka Enclave, Faridabad - 121003",
   mapQuery: "Girraj Sharma Farm House, Ashoka Enclave, Faridabad",
 };
 
-export const locations = [venue];
+export const locations = [residence, venue];
 
-const at = (place) => `${place.name}, ${place.address}`;
+const at = (place) => [place.name, place.address].filter(Boolean).join(", ");
 
 export const eventDays = [
   {
     day: "Thursday, 26th November 2026",
     events: [
-      { title: "Haldi", desc: "A golden beginning to a beautiful journey", time: "7:00 PM", image: img("web/haldi.jpg"), venue: at(venue) },
-      { title: "Mehendi", desc: "Henna, laughter and colours of love", time: "7:30 PM", image: img("web/mehendi.jpg"), venue: at(venue) },
-      { title: "Sangeet", desc: "A night of music, dance and cherished memories", time: "8:00 PM", image: img("web/sanget.jpg"), venue: at(venue) },
+      { title: "Haldi", desc: "A golden beginning to a beautiful journey", time: "7:00 PM", image: img("web/haldi.jpg"), venue: at(residence) },
+      { title: "Mehendi", desc: "Henna, laughter and colours of love", time: "7:30 PM", image: img("web/mehendi.jpg"), venue: at(residence) },
+      { title: "Sangeet", desc: "A night of music, dance and cherished memories", time: "8:00 PM", image: img("web/sanget.jpg"), venue: at(residence) },
     ],
   },
   {
