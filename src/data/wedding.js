@@ -52,17 +52,17 @@ export const eventDays = [
   {
     day: "Thursday, 26th November 2026",
     events: [
-      { title: "Haldi", desc: "A golden beginning to a beautiful journey", time: "7:00 PM", image: img("haldi.png"), venue: at(venue) },
-      { title: "Mehendi", desc: "Henna, laughter and colours of love", time: "7:30 PM", image: img("mehendi.png"), venue: at(venue) },
-      { title: "Sangeet", desc: "A night of music, dance and cherished memories", time: "8:00 PM", image: img("sanget.png"), venue: at(venue) },
+      { title: "Haldi", desc: "A golden beginning to a beautiful journey", time: "7:00 PM", image: img("web/haldi.jpg"), venue: at(venue) },
+      { title: "Mehendi", desc: "Henna, laughter and colours of love", time: "7:30 PM", image: img("web/mehendi.jpg"), venue: at(venue) },
+      { title: "Sangeet", desc: "A night of music, dance and cherished memories", time: "8:00 PM", image: img("web/sanget.jpg"), venue: at(venue) },
     ],
   },
   {
     day: "Friday, 27th November 2026",
     events: [
-      { title: "Reception of Barat", desc: "Welcoming the baraat with love and joy", time: "7:00 PM", image: img("varmal.png"), venue: at(venue) },
-      { title: "Dinner", desc: "An evening of good food and great company", time: "8:00 PM", image: img("recept.jpg"), venue: at(venue) },
-      { title: "Doli", desc: "A tearful, loving farewell to our daughter", time: "Taaron Ki Chhaon Mein", image: img("phere.png"), venue: at(venue) },
+      { title: "Reception of Barat", desc: "Welcoming the baraat with love and joy", time: "7:00 PM", image: img("web/varmal.jpg"), venue: at(venue) },
+      { title: "Dinner", desc: "An evening of good food and great company", time: "8:00 PM", image: img("web/recept.jpg"), venue: at(venue) },
+      { title: "Doli", desc: "A tearful, loving farewell to our daughter", time: "Taaron Ki Chhaon Mein", image: img("web/phere.jpg"), venue: at(venue) },
     ],
   },
 ];
