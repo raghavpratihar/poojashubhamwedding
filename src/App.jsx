@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigation, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Petals } from "./components/Petals";
 import { Butterfly } from "./components/Butterfly";
 import { MusicPlayer } from "./components/MusicPlayer";
@@ -9,16 +9,11 @@ import {
   hosts,
   shlokas,
   weddingDate,
-  locations,
   eventDays,
   rsvp,
   compliments,
   awaitingEyes,
 } from "./data/wedding";
-
-const mapEmbedUrl = (place) => `https://www.google.com/maps?q=${encodeURIComponent(place.mapQuery)}&output=embed`;
-const directionsUrl = (place) =>
-  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.mapQuery)}&travelmode=driving`;
 
 const Divider = ({ width = "w-16" }) => (
   <div className="my-6 flex items-center justify-center gap-3">
@@ -183,45 +178,6 @@ export default function App() {
                   </a>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Location */}
-        <section className="relative py-20 px-6 bg-cream">
-          <div className="relative max-w-6xl mx-auto text-center">
-            <p className="font-cinzel text-xs text-sage-deep tracking-widest">VENUE</p>
-            <h2 className="font-script text-4xl sm:text-5xl text-rose-deep mt-2">Where We Celebrate</h2>
-            <Divider />
-            <div className={`mt-8 grid grid-cols-1 gap-10 ${locations.length > 1 ? "md:grid-cols-2" : "max-w-3xl mx-auto"}`}>
-              {locations.map((place) => (
-                <article key={place.mapQuery}>
-                  <p className="font-cinzel text-xs text-sage-deep tracking-widest uppercase">{place.label}</p>
-                  {place.name && <h3 className="mt-2 font-script text-4xl text-rose-deep">{place.name}</h3>}
-                  <p className="mt-2 font-serif-display text-lg text-foreground/80">{place.address}</p>
-                  <div className="mt-4 overflow-hidden rounded-2xl border border-gold-soft shadow-elegant">
-                    <iframe
-                      src={mapEmbedUrl(place)}
-                      width="100%"
-                      height="320"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      title={`${place.name || place.address} Location`}
-                    />
-                  </div>
-                  <a
-                    href={directionsUrl(place)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 mt-5 text-sm font-medium gradient-gold text-white rounded-full px-8 py-3 shadow-gold hover:opacity-90"
-                  >
-                    <Navigation className="h-4 w-4" />
-                    Get Directions
-                  </a>
-                </article>
-              ))}
             </div>
           </div>
         </section>
