@@ -51,7 +51,7 @@ export const venue = {
   mapQuery: "Girraj Sharma Farm House, Ashoka Enclave, Faridabad",
 };
 
-export const locations = [residence, venue];
+export const locations = [venue];
 
 const at = (place) => [place.name, place.address].filter(Boolean).join(", ");
 
